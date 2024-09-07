@@ -24,7 +24,7 @@ const Cart = () => {
           scrollbarWidth: "none", // for Firefox
           msOverflowStyle: "none", // for IE
           "&::-webkit-scrollbar": {
-            display: "none", // for Chrome and Safari
+            display: "none", // for Chrome
           },
         }}
       >
