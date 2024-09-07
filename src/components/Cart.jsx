@@ -17,11 +17,18 @@ const Cart = () => {
   return (
     <>
       <div
-        className={`fixed right-0 top-0 bg-white w-full lg:w-[20vw] h-full ${
+        className={`fixed right-0 top-0 bg-white w-full lg:w-[20vw] h-full overflow-y overflow-x-hidden ${
           activeCart ? "translate-x-0" : "translate-x-full"
         } transition-all duration-500 z-50`}
+        style={{
+          scrollbarWidth: "none", // for Firefox
+          msOverflowStyle: "none", // for IE
+          "&::-webkit-scrollbar": {
+            display: "none", // for Chrome and Safari
+          },
+        }}
       >
-        <div className="flex  justify-center gap-9 items-center my-4 ">
+       <div className="flex  justify-center gap-9 items-center my-4 ">
           <span className="font-bold text-xl text-gray-800 mt-[50px]">
             My Order
           </span>
